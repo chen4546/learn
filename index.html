@@ -9,7 +9,6 @@
     <h1>cc的学习网站</h1>
 
     <p>你好，我是cc，欢迎来到我的学习网站。</p>
-    <p>瓜王妍你怎么还不睡觉？</p>
     <h2>cc的视频</h2>
     <ul>
       <video width="270" height="480" controls>
@@ -71,7 +70,32 @@
         />
       </svg>
     </ul1>
-    <ul2> <math xlmns </ul2>
+    <ul2>
+      <script>
+        function allowDrop(ev) {
+          ev.preventDefault();
+        }
+        function drag(ev) {
+          ev.dataTransfer.setData("text", ev.target.id);
+        }
+        function drop(ev) {
+          ev.preventDefault();
+          var data = ev.dataTransfer.getData("text");
+          ev.target.appendChild(document.getElementById(data));
+        }
+      </script>
+      <p>拖动cc的头像拖到矩形框中</p>
+      <div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+      <br />
+      <img
+        id="drag1"
+        src="head.jpg"
+        draggable="true"
+        ondragstart="drag(event)"
+        width="100"
+        height="100"
+      />
+    </ul2>
     <ul>
       <canvas
         id="myCanvas3"
