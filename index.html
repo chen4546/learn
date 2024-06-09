@@ -116,6 +116,22 @@
             "<br>纬度：" +
             position.coords.longitude;
         }
+        function showError(error) {
+          switch (error.code) {
+            case error.PERMISSION_DENIED:
+              x.innerHTML = "定位失败,用户拒绝请求地理定位";
+              break;
+            case error.POSITION_UNAVAILABLE:
+              x.innerHTML = "定位失败,位置信息是不可用";
+              break;
+            case error.TIMEOUT:
+              x.innerHTML = "定位失败,请求获取用户位置超时";
+              break;
+            case error.UNKNOWN_ERROR:
+              x.innerHTML = "未知错误。";
+              break;
+          }
+        }
       </script>
     </ul3>
     <ul>
