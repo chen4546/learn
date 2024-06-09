@@ -33,8 +33,13 @@
       <script>
         var c = document.getElementById("myCanvas");
         var ctx = c.getContext("2d");
-        ctx.fillStyle = "#FF0000";
-        ctx.fillRect(0, 0, 150, 75);
+        //渐变
+
+        var grd = ctx.createLinearGradient(0, 0, 200, 0);
+        grd.addColorStop(0, "red");
+        grd.addColorStop(1, "blue");
+        ctx.fillStyle = grd;
+        ctx.fillRect(0, 0, 200, 100);
       </script>
     </ul>
     <h4>cc 的画</h4>
@@ -51,6 +56,19 @@
         height="277"
       />
     </ul>
+    <ul1>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="200"
+        height="200"
+      >
+        <polygon
+          points="100,10 40,180 190,60 10,60 160,180"
+          style="fill: red; stroke: purple; stroke-width: 1"
+        />
+      </svg>
+    </ul1>
     <ul>
       <canvas
         id="myCanvas3"
