@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Learn</title>
+  </head>
+  <body>
+    <h1>cc的学习网站</h1>
+
+    <p>你好，我是cc，欢迎来到我的学习网站。</p>
+    <h2>cc的视频</h2>
+    <ul>
+      <video width="270" height="480" controls>
+        <source src="douyin video.mp4" type="video/mp4" />
+      </video>
+    </ul>
+    <h2>cc的音乐</h2>
+    <ul>
+      <audio controls>
+        <source src="sounds.mp3" type="audio/mpeg" />
+      </audio>
+    </ul>
+  </body>
+  <aside>
+    <h3>cc的图画</h3>
+    <ul>
+      <canvas
+        id="myCanvas"
+        width="200"
+        height="100"
+        style="border: 1px solid #000000"
+      ></canvas>
+      <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.fillStyle = "#FF0000";
+        ctx.fillRect(0, 0, 150, 75);
+      </script>
+    </ul>
+    <h4>cc 的画</h4>
+    <details>
+      <summary>点击查看画作</summary>
+      <img src="painting.jpg" alt="painting" width="200" height="277" />
+    </details>
+    <ul>
+      <img
+        id="myImg"
+        src="painter.jpg"
+        alt="painter"
+        width="200"
+        height="277"
+      />
+    </ul>
+    <ul>
+      <canvas
+        id="myCanvas3"
+        width="200"
+        height="100"
+        style="border: 1px solid #d3d3d3"
+      ></canvas>
+      <script>
+        var c = document.getElementById("myCanvas3");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.strokeText("Hello World", 10, 50);
+      </script>
+    </ul>
+  </aside>
+  <footer>
+    <canvas id="mycan" width="200" height="200"></canvas>
+    <script>
+      var c = document.getElementById("mycan");
+      var ctx = c.getContext("2d");
+      ctx.beginPath();
+      ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+      ctx.stroke();
+    </script>
+  </footer>
+</html>
